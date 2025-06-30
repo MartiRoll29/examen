@@ -11,6 +11,7 @@ import javax.swing.JOptionPane;
  * @author Desert
  */
 public class AngenteDeVentas {
+    
     public String nombreAgente;
     public String cedulaAgente;
     public int codigoAgente;
