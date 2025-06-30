@@ -4,6 +4,7 @@
  */
 package casoevaluado1;
 
+import com.sun.source.tree.SwitchTree;
 import javax.swing.JOptionPane;
 
 /**
@@ -68,12 +69,12 @@ public class Mostrar {
         this.puntosObtenidos = puntosObtenidos;
     }
 
-    public int getVehiculoPropio() {
+    public String getVehiculoPropio() {
         return vehiculoPropio;
     }
 
-    public void setVehiculoPropio(int vehiculoPropio) {
-        this.vehiculoPropio = vehiculoPropio;
+    public void setVehiculoPropio(String vehiculoPropio) {
+        this.vehiculoPropio = vehiculoPropio;   
     }
 
     public String getSucursal() {
@@ -96,20 +97,17 @@ public class Mostrar {
     private double totalComiciones ;
     private String objetivoMensual;
     private int puntosObtenidos ;
-    private int vehiculoPropio ;
+    private String vehiculoPropio ;
     private String sucursal ;
+    
+    String mesEnTexto = "";
+
+    
     
     public String SalidaFinal(){
         
-        JOptionPane.showMessageDialog(null, "El agente ve   ndedor:"+nombreAgente+" codigo de agente:  "+codigoAgente+" en el mes de:  "+mes);
-        
-        JOptionPane.showMessageDialog(null, "El agente vendio un total de: "+totalVendido+" en facturas ");
-        JOptionPane.showMessageDialog(null, "Obtuvo un total en comiciones de: "+totalComiciones);
-        JOptionPane.showMessageDialog(null, "El agente vendedor  "+objetivoMensual+" logro el objetivo de llegar al BONO EXTRA");
-        JOptionPane.showMessageDialog(null, "Puntos obtenidos por el agente vendedor  "+puntosObtenidos+"");
-        JOptionPane.showMessageDialog(null, "Puntos obtenidos por el agente vendedor  "+puntosObtenidos+"");
-        JOptionPane.showMessageDialog(null, "El ajente verndedor "+vehiculoPropio+" cuenta con vehiculo propio");
-        JOptionPane.showMessageDialog(null, "Sucursal  "+sucursal);
+        //muestra la salida final
+        JOptionPane.showMessageDialog(null, "El agente vendedor: "+nombreAgente+" codigo de agente: "+codigoAgente+" en el mes de "+mes+"\nEl agente vendio un total de: "+totalVendido+" en facturas "+"\nEl agente vendedor obtuvo un total en comiciones de: "+totalComiciones+"\nEl agente vendedor "+objetivoMensual+" logro el objetivo de llegar al BONO EXTRA"+"\nPuntos obtenidos por el agente vendedor  "+puntosObtenidos+""+"\nEl agente vendedor "+vehiculoPropio+" cuenta con vehiculo propio"+"\nSucursal "+sucursal);
         
         
         return "";
